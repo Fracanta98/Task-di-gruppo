@@ -13,6 +13,12 @@ public class Main {
         ProdottoElettronico pe2 = new ProdottoElettronico("pc", 500, false);
         Prodotti.add(pe2);
 
+        ProdottoAlimentare pa1 = new ProdottoAlimentare("pane", 20.5, 2);
+        Prodotti.add(pa1);
+        ProdottoAlimentare pa2 = new ProdottoAlimentare("pasta",10, 10);
+        Prodotti.add(pa2);
+        
+
         
 
         System.out.println("Premi 1 per aggiungere prodotto alimentare");
