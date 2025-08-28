@@ -24,4 +24,16 @@ public class ProdottoElettronico extends Prodotto {
     public double setPrezzoBase( double nuovoPrezzoBase){
         return nuovoPrezzoBase = getPrezzoBase();
     }
+
+    public double setPrezzoFinale(double prezzoFinale){
+        
+          if(garanzia = true){
+
+            return prezzoFinale = getPrezzoBase() + (getPrezzoBase()*0.10);
+           
+        }else{
+            return prezzoFinale = getPrezzoBase();
+    }
+
+    }
 }

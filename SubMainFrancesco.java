@@ -6,7 +6,7 @@ public class SubMainFrancesco {
      public static void main(String[] args){
 
         ArrayList <Prodotto> Prodotti = new ArrayList<>();
-        ArrayList <Prodotto> Carrello = new ArrayList<>();
+        ArrayList Carrello = new ArrayList<Double>();
 
 
         ProdottoElettronico pe1 = new ProdottoElettronico("tv", 300, false);
@@ -72,7 +72,8 @@ public class SubMainFrancesco {
                             if(scelta1 == "y"){
                                 pe1.switchGaranzia();
                                 pe1.calcolaPrezzoFinale();
-                                Carrello.add(pe1);
+                                double prezzoFinale = pe1.setPrezzoFinale(e);
+                                Carrello.add(prezzoFinale);
 
 
                                 
@@ -133,7 +134,7 @@ public class SubMainFrancesco {
         double  saldoFinale = 0;
 
         for(int i = 0; i < Carrello.size(); i++){
-                saldoFinale = saldoFinale + getPrezzoBase();
+                saldoFinale += Carrello[i];
             
         }
 
