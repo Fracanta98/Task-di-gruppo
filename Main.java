@@ -8,7 +8,7 @@ public class Main {
         ArrayList <Prodotto> Carrello = new ArrayList<>();
 
 
-        ProdottoElettronico pe1 = new ProdottoElettronico("tv", 300, true);
+        ProdottoElettronico pe1 = new ProdottoElettronico("tv", 300, false);
         Prodotti.add(pe1);
         ProdottoElettronico pe2 = new ProdottoElettronico("pc", 500, false);
         Prodotti.add(pe2);
@@ -29,7 +29,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
         
-        switch (a) {
+        do{
+            switch (a) {
             case 1:
                 
                 System.out.println("Scegli il prodotto da aggiungere al carrello");
@@ -64,7 +65,7 @@ public class Main {
                         case 1:
                              
                              Carrello.add(pe1);
-                             
+
                             
                             break;
                     
@@ -91,6 +92,8 @@ public class Main {
             default :
                 break;
         }
+
+        }while (a != 0);
 
 
 

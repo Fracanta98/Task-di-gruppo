@@ -20,4 +20,5 @@ public class ProdottoElettronico extends Prodotto {
     public boolean switchGaranzia(){
         return garanzia = !garanzia;
     }
+    
 }

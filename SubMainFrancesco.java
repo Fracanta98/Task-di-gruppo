@@ -9,7 +9,7 @@ public class SubMainFrancesco {
         ArrayList <Prodotto> Carrello = new ArrayList<>();
 
 
-        ProdottoElettronico pe1 = new ProdottoElettronico("tv", 300, true);
+        ProdottoElettronico pe1 = new ProdottoElettronico("tv", 300, false);
         Prodotti.add(pe1);
         ProdottoElettronico pe2 = new ProdottoElettronico("pc", 500, false);
         Prodotti.add(pe2);
@@ -54,8 +54,10 @@ public class SubMainFrancesco {
                     System.out.println("Scegli un prodotto da aggiungere al carrello:");
                     System.out.println("Premi 1 per aggiungere tv 300$");
                     System.out.println("Premi 2 per aggiungere PC 500$");
+                    System.out.println("Premi 0 per uscire");
                     int e = scanner.nextInt();
-                    scanner.close();
+
+                   
                 do {
                  
                     
@@ -63,12 +65,47 @@ public class SubMainFrancesco {
                     switch (e) {
                         case 1:
                              
-                             Carrello.add(pe1);
                              
+                        
+                            System.out.println("Vuoi applicare la garanzia? y/n");
+                            String scelta1 = scanner.nextLine();
+                            if(scelta1 == "y"){
+                                pe1.switchGaranzia();
+                                pe1.calcolaPrezzoFinale();
+                                Carrello.add(pe1);
+
+
+                                
+                            }else{
+                                pe1.calcolaPrezzoFinale();
+                                Carrello.add(pe1);
+                            }
                             
+                            break;
+
+                        case 2:
+                            
+                            System.out.println("Vuoi applicare la garanzia? y/n");
+                            String scelta2 = scanner.nextLine();
+                            if(scelta2 == "y"){
+                                pe2.switchGaranzia();
+                                pe2.calcolaPrezzoFinale();
+                                Carrello.add(pe2);
+
+
+                                
+                            }else{
+                                pe2.calcolaPrezzoFinale();
+                                Carrello.add(pe2);
+                            }
+                            
+                            break;
+
+                        case 0:
                             break;
                     
                         default:
+                            System.out.println("Errore, Roberto mangia la frittatina di pasta!");
                             break;
                     }
                     
