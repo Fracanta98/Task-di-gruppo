@@ -27,27 +27,35 @@ public class SubmainAndrea {
 
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
-        scanner.close();
+        
         switch (a) {
             case 1:
+                System.out.println("Scegli un prodotto da aggiungere al carrello:");
+                System.out.println("Premi 1 per aggiungere pane");
+                System.out.println("Premi 2 per aggiungere pasta");
+                int scelta = scanner.nextInt();          
                 
-                System.out.println("Scegli il prodotto da aggiungere al carrello");
-                String scelta = scanner.nextLine();
-                scanner.close();
-                switch(scelta){
-                    case "pane":
+                do{
+                    // creo un sottomenù dei prodottti alimentari 
+                    switch(scelta){
+                        case 1:
+                            // aggiungo il prodotto al carrello
+                            Carrello.add(pa1);
+                            pa1.calcolaPrezzoFinale();// stampo il prezzo del prodotto
+                                                    
+                        break;
+                        case 2:
+                            Carrello.add(pa2);
+                            pa2.calcolaPrezzoFinale();
+                        break;
+                        default:
+                            System.out.println("Prodotto inserito non valido");
+                        break;
+                        }
+                        break;
 
-                        pa1.calcolaPrezzoFinale();
-                    break;
-                    case "pasta":
-                        pa2.calcolaPrezzoFinale();
-                    break;
-                    default:
-                        System.out.println("Prodotto inserito non valido");
-                    break;
-                }
-                break;
-            
+                }while (scelta !=0);
+                scanner.close();
 
             case 2:
                 
