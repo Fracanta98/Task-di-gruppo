@@ -10,8 +10,8 @@ public class Prodotto {
     }
 
 
-    public double calcolaPrezzoFinale(){
-        return prezzoBase;
+    public void calcolaPrezzoFinale(){
+        System.out.println("Prezzo: " + prezzoBase);
     }
 
     public String getNome(){
@@ -21,5 +21,5 @@ public class Prodotto {
     public double getPrezzoBase(){
         return prezzoBase;
     }
-    
+
 }
