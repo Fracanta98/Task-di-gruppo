@@ -43,7 +43,7 @@ public class Main {
                         pa2.calcolaPrezzoFinale();
                     break;
                     default:
-                        System.out.println("Prodotto inserito no valido");
+                        System.out.println("Prodotto inserito non valido");
                     break;
                 }
                 break;
