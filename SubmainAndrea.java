@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args){
-
+public class SubmainAndrea {
+    public static void main(String[] args) {
         ArrayList <Prodotto> Prodotti = new ArrayList<>();
         ArrayList <Prodotto> Carrello = new ArrayList<>();
 
@@ -28,7 +27,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
-        
+        scanner.close();
         switch (a) {
             case 1:
                 
@@ -51,32 +50,9 @@ public class Main {
             
 
             case 2:
-                    System.out.println("Scegli un prodotto da aggiungere al carrello:");
-                    System.out.println("Premi 1 per aggiungere tv 300$");
-                    System.out.println("Premi 2 per aggiungere PC 500$");
-                    int e = scanner.nextInt();
-                    scanner.close();
-                do {
-                 
-                    
-                    
-                    switch (e) {
-                        case 1:
-                             
-                             Carrello.add(pe1);
-                             
-                            
-                            break;
-                    
-                        default:
-                            break;
-                    }
-                    
-                  } while (e != 0);
-
                 
 
-              
+                System.out.println("Aggiungi il nome");
 
                 break;
 
@@ -91,10 +67,6 @@ public class Main {
             default :
                 break;
         }
-
-
-
-
     }
     
 }
