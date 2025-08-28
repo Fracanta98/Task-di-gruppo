@@ -5,10 +5,13 @@ public class Main {
     public static void main(String[] args){
 
         ArrayList <Prodotto> Prodotti = new ArrayList<>();
+        ArrayList <Prodotto> Carrello = new ArrayList<>();
 
 
-        // ProdottoElettronico pe1 = new ProdottoElettronico("tv", 300, true);
-        // Prodotti.add(pe1);
+        ProdottoElettronico pe1 = new ProdottoElettronico("tv", 300, true);
+        Prodotti.add(pe1);
+        ProdottoElettronico pe2 = new ProdottoElettronico("pc", 500, false);
+        Prodotti.add(pe2);
 
         
 
@@ -19,6 +22,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
+        scanner.close();
         switch (a) {
             case 1:
                 
@@ -26,6 +30,8 @@ public class Main {
             
 
             case 2:
+
+                System.out.println("Aggiungi il nome");
 
                 break;
 
@@ -37,7 +43,7 @@ public class Main {
 
 
         
-            default 0:
+            default :
                 break;
         }
 
