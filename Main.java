@@ -6,15 +6,8 @@ public class Main {
 
         ArrayList <Prodotto> Prodotti = new ArrayList<>();
 
+        
 
-        ProdottoElettronico pe1 = new ProdottoElettronico("tv", 300, true);
-        Prodotti.add(pe1);
-        ProdottoElettronico pe2 = new ProdottoElettronico("tv", 300, true);
-        Prodotti.add(pe2);
-        ProdottoElettronico pl1 = new ProdottoLibro("Hunger Games Trilogy", 300, true);
-        Prodotti.add(pl1);
-        ProdottoElettronico pl2 = new ProdottoLibro("Clai obscur Expedition 33", 50, true);
-        Prodotti.add(pl2);
         
 
         System.out.println("Premi 1 per aggiungere prodotto alimentare");
