@@ -67,7 +67,7 @@ public class SubMainFrancesco {
                              
                              
                         
-                            System.out.println("Vuoi applicare la garanzia? y/n");
+                            System.out.println("Vuoi applicare la garanzia? premi y minuscolo per accettare");
                             String scelta1 = scanner.nextLine();
                             if(scelta1 == "y"){
                                 pe1.switchGaranzia();
@@ -128,6 +128,16 @@ public class SubMainFrancesco {
             default :
                 break;
         }
+
+
+        double  saldoFinale = 0;
+
+        for(int i = 0; i < Carrello.size(); i++){
+                saldoFinale = saldoFinale + getPrezzoBase();
+            
+        }
+
+
 
 
 

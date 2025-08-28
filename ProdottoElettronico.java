@@ -21,4 +21,7 @@ public class ProdottoElettronico extends Prodotto {
         return garanzia = !garanzia;
     }
     
+    public double setPrezzoBase( double nuovoPrezzoBase){
+        return nuovoPrezzoBase = getPrezzoBase();
+    }
 }
