@@ -31,7 +31,21 @@ public class Main {
         scanner.close();
         switch (a) {
             case 1:
-                
+                System.out.println("Scegli il prodotto da aggiungere al carrello");
+                String scelta = scanner.nextLine();
+                scanner.close();
+                switch(scelta){
+                    case "pane":
+
+                        pa1.calcolaPrezzoFinale();
+                    break;
+                    case "pasta":
+                        pa2.calcolaPrezzoFinale();
+                    break;
+                    default:
+                        System.out.println("Prodotto inserito no valido");
+                    break;
+                }
                 break;
             
 
