@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
 public class BibliotecaService {
-     ArrayList<Libro> libri = new ArrayList<>();
+     ArrayList<Models.Libro> libri = new ArrayList<>();
 
 
 
 
-    public void aggiungiLibro(Libro nuovoLibro){
+    public void aggiungiLibro(Models.Libro nuovoLibro){
         libri.add(nuovoLibro);
     }
 
@@ -29,8 +29,8 @@ public class BibliotecaService {
    
 //         }
 
-    public boolean prestaLibro(String titolo, Utente utente) {
-        for (Libro libro : libri) {
+    public boolean prestaLibro(String titolo, Models.Utente utente) {
+        for (Models.Libro libro : libri) {
             if (libro.getTitolo().equalsIgnoreCase(titolo) && libro.isDisponibile()) {
                 libro.setDisponibile(false);
                 System.out.println("OK" + utente.getNome() + " ha preso in prestito \"" + libro.getTitolo() + "\"");
@@ -44,7 +44,7 @@ public class BibliotecaService {
 
     public void mostraLibriDisponibili() {
         System.out.println("Libri disponibili:");
-        for (Libro libro : libri) {
+        for (Models.Libro libro : libri) {
             if (libro.isDisponibile()) {
                 System.out.println("- " + libro.getTitolo() + " di " + libro.getAutore());
             }
