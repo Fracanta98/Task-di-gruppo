@@ -3,7 +3,7 @@ public final class Models {
     private String titolo;
     private String autore;
     private int anno;
-    private boolean disponibile;
+    private boolean disponibile = true;
 
 
 
@@ -11,7 +11,7 @@ public final class Models {
     this.titolo = titolo;
     this.autore = autore;
     this.anno = anno;
-    this.disponibile = true;
+    this.disponibile = disponibile;
 }
 
 @Override
