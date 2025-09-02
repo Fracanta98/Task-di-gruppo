@@ -1,14 +1,7 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-
-
-public class Biblioteca {
-
-    
-    
-    ArrayList<Libro> libri = new ArrayList<>();
+public class BibliotecaService {
+     ArrayList<Libro> libri = new ArrayList<>();
 
 
 
@@ -23,18 +16,18 @@ public class Biblioteca {
         
     // }
 
-   public void ricercaPerTitolo(String tit){
-         Libro risultatoRicerca = null;//array di appoggio
-        for(Libro libro: libri){
-            if(libro.getTitolo().trim().equalsIgnoreCase(tit.trim())){
-                risultatoRicerca = libro;
-                break;
+//    public void ricercaPerTitolo(String tit){
+//          Libro risultatoRicerca = null;//array di appoggio
+//         for(Libro libro: libri){
+//             if(libro.getTitolo().trim().equalsIgnoreCase(tit.trim())){
+//                 risultatoRicerca = libro;
+//                 break;
                 
-            }
-        }
-        System.out.println("Libro: " + risultatoRicerca);
+//             }
+//         }
+//         System.out.println("Libro: " + risultatoRicerca);
    
-        }
+//         }
 
     public boolean prestaLibro(String titolo, Utente utente) {
         for (Libro libro : libri) {
@@ -57,7 +50,5 @@ public class Biblioteca {
             }
         }
     }
+    
 }
-
-  
-

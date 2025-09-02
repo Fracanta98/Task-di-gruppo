@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args){
 
-    Biblioteca a = new Biblioteca(); //questo è un oggetto che contiene tutti i metodi e quindi anche l'array del file biblioteca
+    BibliotecaService a = new BibliotecaService(); //questo è un oggetto che contiene tutti i metodi e quindi anche l'array del file biblioteca
 
     Libro l1 = new Libro("hunger", "suzanne", 2010, true);
     a.aggiungiLibro(l1);
@@ -15,7 +15,7 @@ public class Main {
 
     // a.visualizzaLibri();
 
-    a.ricercaPerTitolo("hunger");
+    // a.ricercaPerTitolo("hunger");
     
 
 
