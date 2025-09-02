@@ -4,6 +4,7 @@ public final class Models {
     private String autore;
     private int anno;
     private boolean disponibile = true;
+    
 
 
 

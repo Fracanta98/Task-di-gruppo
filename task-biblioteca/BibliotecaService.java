@@ -16,18 +16,18 @@ public class BibliotecaService {
         
     // }
 
-//    public void ricercaPerTitolo(String tit){
-//          Libro risultatoRicerca = null;//array di appoggio
-//         for(Libro libro: libri){
-//             if(libro.getTitolo().trim().equalsIgnoreCase(tit.trim())){
-//                 risultatoRicerca = libro;
-//                 break;
+   public void ricercaPerTitolo(String tit){
+         Models.Libro risultatoRicerca = null;//array di appoggio
+        for(Models.Libro libro: libri){
+            if(libro.getTitolo().trim().equalsIgnoreCase(tit.trim())){
+                risultatoRicerca = libro;
+                break;
                 
-//             }
-//         }
-//         System.out.println("Libro: " + risultatoRicerca);
+            }
+        }
+        System.out.println("Libro: " + risultatoRicerca);
    
-//         }
+        }
 
     public boolean prestaLibro(String titolo, Models.Utente utente) {
         for (Models.Libro libro : libri) {
@@ -49,6 +49,18 @@ public class BibliotecaService {
                 System.out.println("- " + libro.getTitolo() + " di " + libro.getAutore());
             }
         }
+    }
+
+    public boolean restituisciLibro(String titolo, Models.Utente utente) {
+        for (Models.Libro libro : libri) {
+            if (libro.getTitolo().equalsIgnoreCase(titolo) && libro.isDisponibile()) {
+                libro.setDisponibile(true);
+                System.out.println("OK" + utente.getNome() + " ha restituito \"" + libro.getTitolo() + "\"");
+                return true;
+            }
+        }
+        System.out.println("NO Libro \"" + titolo + "\" non restituito!");
+        return false;
     }
     
 }
