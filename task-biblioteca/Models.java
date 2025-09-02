@@ -1,5 +1,5 @@
 public final class Models {
-    public class Libro {
+    public static class Libro {
     private String titolo;
     private String autore;
     private int anno;
@@ -38,7 +38,7 @@ public void setDisponibile(boolean disponibile) {this.disponibile = disponibile;
 }
 
 
-public class Utente {
+public static class Utente {
     private String nome;
     private String id;
 
