@@ -35,4 +35,29 @@ public class Biblioteca {
         System.out.println("Libro: " + risultatoRicerca);
    
         }
+
+    public boolean prestaLibro(String titolo, Utente utente) {
+        for (Libro libro : libri) {
+            if (libro.getTitolo().equalsIgnoreCase(titolo) && libro.isDisponibile()) {
+                libro.setDisponibile(false);
+                System.out.println("OK" + utente.getNome() + " ha preso in prestito \"" + libro.getTitolo() + "\"");
+                return true;
+            }
+        }
+        System.out.println("NO Libro \"" + titolo + "\" non disponibile!");
+        return false;
+    }
+
+
+    public void mostraLibriDisponibili() {
+        System.out.println("Libri disponibili:");
+        for (Libro libro : libri) {
+            if (libro.isDisponibile()) {
+                System.out.println("- " + libro.getTitolo() + " di " + libro.getAutore());
+            }
+        }
+    }
 }
+
+  
+
