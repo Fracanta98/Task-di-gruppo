@@ -8,13 +8,15 @@ public class Main {
 
     Biblioteca a = new Biblioteca(); //questo è un oggetto che contiene tutti i metodi e quindi anche l'array del file biblioteca
 
-    Libro l1 = new Libro("hunger games ", " suzanne collins ", 2010);
+    Libro l1 = new Libro("hunger", "suzanne", 2010);
     a.aggiungiLibro(l1);
-    Libro l2 = new Libro("Clair Obscur ", " Sandfall ", 2025);
+    Libro l2 = new Libro("Obscur", "Sandfall", 2025);
     a.aggiungiLibro(l2);
 
-    a.visualizzaLibri();
+    // a.visualizzaLibri();
 
+    a.ricercaPerTitolo("hunger");
+    
 
 
 

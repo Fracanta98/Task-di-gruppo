@@ -11,6 +11,13 @@ public Libro(String titolo, String autore, int anno){
     this.anno = anno;
 }
 
+@Override
+public String toString() {
+    return getTitolo() + " " + getAutore() + " " + getAnno(); //override di toString altrimenti java
+                                                              //con il suo formato  
+}
+
+
 
 public String getTitolo(){return titolo;}
 public String getAutore(){return autore;}
