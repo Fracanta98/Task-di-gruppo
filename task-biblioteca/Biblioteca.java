@@ -11,7 +11,11 @@ public class Biblioteca {
 
 
     public void aggiungiLibro(Libro nuovoLibro){
-        
+        libri.add(nuovoLibro);
+    }
+
+    public void visualizzaLibri(){
+        System.out.println(libri);
     }
     
 }
