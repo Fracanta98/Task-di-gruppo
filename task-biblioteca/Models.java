@@ -1,4 +1,5 @@
-public class Libro {
+public final class Models {
+    public class Libro {
     private String titolo;
     private String autore;
     private int anno;
@@ -6,7 +7,7 @@ public class Libro {
 
 
 
-public Libro(String titolo, String autore, int anno, boolean disponibile){
+    public Libro(String titolo, String autore, int anno, boolean disponibile){
     this.titolo = titolo;
     this.autore = autore;
     this.anno = anno;
@@ -37,3 +38,22 @@ public void setDisponibile(boolean disponibile) {this.disponibile = disponibile;
 }
 
 
+public class Utente {
+    private String nome;
+    private String id;
+
+    public Utente(String nome, String id){
+        this.nome = nome;
+        this.id = id;
+    }
+
+    public String getNome(){return nome;}
+    public String getId(){return id;}
+
+    public String setNome(String nuovoNome){return this.nome = nuovoNome;}
+    public String setId(String nuovoId){return this.id = nuovoId;}
+    
+    
+}
+
+}
